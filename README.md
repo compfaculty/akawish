@@ -1,2 +1,2 @@
 # akawish
-emotional tracker
+news emotional tracker
