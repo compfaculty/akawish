@@ -32,7 +32,7 @@ func main() {
 	})
 	merged := Merge(
 		Subscribe(Fetch("http://feeds.feedburner.com/adb_news?format=xml")),
-		Subscribe(Fetch("https://rss.art19.com/apology-line")),
+		// Subscribe(Fetch("https://rss.art19.com/apology-line")),
 		Subscribe(Fetch("http://rss.cnn.com/rss/edition.rss")),
 		Subscribe(Fetch("http://rss.cnn.com/rss/edition_world.rss")),
 		Subscribe(Fetch("http://rss.cnn.com/rss/edition_europe.rss")),
@@ -58,5 +58,5 @@ func main() {
 		}
 	}()
 	log.Println("Server started...")
-	log.Fatal(http.ListenAndServe("localhost:8888", nil))
+	log.Fatal(http.ListenAndServe(":8000", nil))
 }
